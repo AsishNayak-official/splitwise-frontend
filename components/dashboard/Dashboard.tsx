@@ -1,13 +1,11 @@
-import Credit from "@/components/common/Credit";
-import Debt from "@/components/common/Debt";
-import RecentActivity from "@/components/common/RecentActivity";
-import { Button } from "@/components/ui/button";
+import Credit from "../common/Credit";
+import Debt from "../common/Debt";
+import RecentActivity from "../common/RecentActivity";
+import { Button } from "../ui/button";
 
-export default function Home() {
+const Dashboard = () => {
   return (
-    <div>
-      <span>Group X</span>
-      <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5">
       <div className="flex flex-col sm:flex-row justify-between gap-10">
         <Debt />
         <Credit />
@@ -22,6 +20,7 @@ export default function Home() {
         <RecentActivity />
       </div>
     </div>
-    </div>
   );
-}
+};
+
+export default Dashboard;

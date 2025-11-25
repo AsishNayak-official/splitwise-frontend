@@ -3,7 +3,7 @@ import Debt from "@/components/common/Debt";
 import RecentActivity from "@/components/common/RecentActivity";
 import { Button } from "@/components/ui/button";
 
-export default function Home() {
+const GroupDashboard = () => {
   return (
     <div>
       <span>Group X</span>
@@ -25,3 +25,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default GroupDashboard;
