@@ -12,6 +12,7 @@ export const SIDEBAR_MENU = {
         {
           title: "Family",
           url: "#",
+          isActive: true,
         },
         {
           title: "Banglore Trip",
@@ -24,23 +25,12 @@ export const SIDEBAR_MENU = {
       ],
     },
     {
-      title: "Recent Activity",
-      url: "#",
-      items: [
-        {
-          title: "Aman",
-          url: "#",
-        },
-        {
-          title: "Prithvi",
-          url: "#",
-          isActive: true,
-        },
-        {
-          title: "Asish",
-          url: "#",
-        },
-      ],
+      title: "Friends",
+      url: "/friends",
+    },
+    {
+      title: "Subscribe",
+      url: "/subscribe",
     },
   ],
 }

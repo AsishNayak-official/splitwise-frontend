@@ -44,3 +44,16 @@ subscription features
  - charts and graphs
  - save custom split
  - add unlimited expenses
+
+
+
+
+recent activity will have all transactions
+transaction history will have transaction related to me only
+
+
+- friends page design
+- expense split form
+- login and signup
+- subscription page design
+
