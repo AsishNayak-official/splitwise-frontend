@@ -2,6 +2,7 @@ import Credit from "@/components/common/Credit";
 import Debt from "@/components/common/Debt";
 import RecentActivity from "@/components/common/RecentActivity";
 import { Button } from "@/components/ui/button";
+import SplitHistory from "../common/SplitHistory";
 
 const GroupDashboard = () => {
   return (
@@ -18,7 +19,7 @@ const GroupDashboard = () => {
           <Credit />
         </div>
         <div>
-          <RecentActivity />
+          <SplitHistory />
         </div>
       </div>
     </div>

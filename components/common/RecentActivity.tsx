@@ -9,14 +9,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Users } from "lucide-react";
-import Transactions from "./Transactions";
 
 const RecentActivity = () => {
   return (
     <Card className="w-full">
       <CardHeader>
         <CardTitle>Recent Activity</CardTitle>
-        <CardAction><Transactions/></CardAction>
       </CardHeader>
       <CardContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full h-[25vh] overflow-y-auto">
           <div className="flex flex-row gap-1 border rounded-2xl px-3 py-2 items-center h-fit">
