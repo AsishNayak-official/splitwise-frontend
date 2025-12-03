@@ -1,18 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# splitwise-clone (frontend)
 
-First, run the development server:
+This repository contains the Next.js frontend for a Splitwise-like application. The README below describes the first steps to get the app running locally and lists the main features implemented in this frontend.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## First steps — run locally
+
+1. Prerequisites
+	- Node.js (v18+ recommended)
+	- npm (v9+ recommended) or yarn
+
+2. Install dependencies
+
+	Open a terminal in the `frontend` folder and run:
+
+```powershell
+npm install
 ```
+
+3. Start development server
+
+```powershell
+npm run dev
+```
+
+The app will start using Next.js. By default it listens on http://localhost:3000 unless configured otherwise.
+
+4. Build and run production
+
+```powershell
+npm run build
+npm run start
+```
+
+5. Useful scripts
+
+- `npm run dev` — start Next.js in development mode (fast refresh enabled)
+- `npm run build` — create an optimized production build
+- `npm run start` — start the built production server
+- `npm run lint` — run ESLint
+
+Troubleshooting tips
+- If you see errors about unsupported Node version, upgrade Node to v18+.
+- If types or dev dependencies are missing, run `npm install` again. Remove `node_modules` and `package-lock.json` and reinstall if you hit dependency resolution issues.
+
+## What this frontend implements (features)
+
+The frontend provides a minimal Splitwise-like experience focused on groups, friends, and shared expenses. Key features:
+
+- Authentication handling (login flow and token decode via `jwt-decode`).
+- Global state management using Redux Toolkit (`redux` folder and slices for auth, friends, and groups).
+- Dashboard view showing account summary, recent activity and quick add expense UI (`components/dashboard`).
+- Friends management: add friends, view friends list and balances (`components/friends`).
+- Group management: create/view groups, add group expenses, and view split history (`components/group`).
+- Expense splitting UI to add and split new expenses between users (`components/dashboard/SplitNewExpense.tsx`, `components/group/AddGroupExpense.tsx`).
+- Reusable UI primitives and design system (`components/ui/*`) including buttons, inputs, cards, tables, dialogs, avatar, tooltip, and sidebar.
+- API layer under the `api/` folder for making authenticated requests (axios interceptor included).
+- Form handling with Formik and client-side validation rules located in `validations/`.
+- Tailwind CSS v4 for utility-first styling (see `postcss.config.mjs` and `tailwind` config files).
+
+Files and folders of interest
+- `app/` — Next.js app routes and layouts.
+- `components/` — UI components grouped by feature.
+- `api/` — API wrappers and axios interceptor.
+- `redux/` — store, providers and slices.
+- `validations/` — Form validation logic.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -35,25 +86,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-
-
-subscription features
- - simplify
- - summary view and export
- - receipt attachment
- - charts and graphs
- - save custom split
- - add unlimited expenses
-
-
-
-
-recent activity will have all transactions
-transaction history will have transaction related to me only
-
-
-- friends page design
-- expense split form
-- login and signup
-- subscription page design
 
